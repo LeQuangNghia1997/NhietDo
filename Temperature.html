@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Temperature = function (C) {
+        this.C = C;
+        this.getC = function () {
+            return C;
+        }
+        this.getF = function () {
+            return (C*18)+32;
+        }
+        this.getKevin = function () {
+            return C+273.15;
+        }
+    }
+    var temperature = new Temperature(5)
+    var f = temperature.getF();
+    var kevin = temperature.getKevin();
+    document.write("<br/>","Do F: " +  f + "; Kevin: " + kevin);
+</script>
+</body>
+</html>
